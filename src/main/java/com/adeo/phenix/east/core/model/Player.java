@@ -12,6 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 @Entity
 public class Player {
     @Id
@@ -24,9 +28,12 @@ public class Player {
     private int num;
     @Column(name = "position")
     private String position;
+    
     @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name = "team_id", nullable = false)
-        private Team team;
+    @JoinColumn(name = "team_id", nullable = false)
+    @JsonIgnore
+    private Team team;
+    
     public Player() {
     }
         // getters/setters
@@ -59,10 +66,5 @@ public class Player {
 	}
 	public void setTeam(Team team) {
 		this.team = team;
-	}
-	public void setTeam(Optional<Team> barcelona) {
-		// TODO Auto-generated method stub
-		this.team = (Team)team;
-		
 	}
 }

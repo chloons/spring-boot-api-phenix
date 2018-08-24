@@ -11,8 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.adeo.phenix.east.core.service.SoccerService;
 
 @SpringBootApplication
-public class PhenixSpringApiApplication implements CommandLineRunner{
-		
+//public class PhenixSpringApiApplication implements CommandLineRunner{
+public class PhenixSpringApiApplication {
+			
 
 	@Autowired
     SoccerService soccerService;
@@ -20,8 +21,8 @@ public class PhenixSpringApiApplication implements CommandLineRunner{
     public static void main(String[] args) {
         SpringApplication.run(PhenixSpringApiApplication.class, args);
     }
-    @Override
-    public void run(String... arg0) throws Exception {
+    // @Override
+    public void run2(String... arg0) throws Exception {
         soccerService.addBarcelonaPlayer("Xavi Hernandez", "Midfielder", 6);
         List<String> players = soccerService.getAllTeamPlayers(1);
         for(String player : players)

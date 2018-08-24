@@ -7,5 +7,5 @@ import com.adeo.phenix.east.core.model.Team;
 
 @Repository
 public interface TeamRepository extends CrudRepository<Team, Long> {
-    Team findByPlayers(long playerId);
+    // Team findByPlayers(long playerId);
 }

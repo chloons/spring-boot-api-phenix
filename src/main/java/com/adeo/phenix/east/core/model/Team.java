@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
 @Entity
 public class Team {
     @Id
@@ -18,10 +19,12 @@ public class Team {
     private Long id;
     @Column(name = "name")
     private String name;
-    @OneToMany(cascade = CascadeType.ALL,
+    
+@OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER,
             mappedBy = "team")
     private List<Player> players;
+    
     public Team() {
     }
         // getters/setters

@@ -34,8 +34,9 @@ import com.adeo.phenix.east.core.repository.PlayerRepository;
 	        newPlayer.setName(name);
 	        newPlayer.setPosition(position);
 	        newPlayer.setNum(number);
-	        // newPlayer.setTeam(barcelona);
-	        //playerRepository.save(newPlayer);
+	        
+	        // if (barcelona.isPresent()) newPlayer.setTeam(barcelona.get());
+	        playerRepository.save(newPlayer);
 	    }
 	}	
 
