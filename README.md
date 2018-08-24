@@ -1,2 +1,4 @@
 # spring-boot-api-phenix
-Expose API Phenix 
+* Aim = Expose API Phenix 
+
+A maven project for Exposing some Business data with Spring / Kotlin / Hibernate / Liquibase frameworks
