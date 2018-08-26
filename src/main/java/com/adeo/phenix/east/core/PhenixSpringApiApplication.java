@@ -22,7 +22,7 @@ public class PhenixSpringApiApplication {
         SpringApplication.run(PhenixSpringApiApplication.class, args);
     }
     // @Override
-    public void run2(String... arg0) throws Exception {
+    public void run(String... arg0) throws Exception {
         soccerService.addBarcelonaPlayer("Xavi Hernandez", "Midfielder", 6);
         List<String> players = soccerService.getAllTeamPlayers(1);
         for(String player : players)
